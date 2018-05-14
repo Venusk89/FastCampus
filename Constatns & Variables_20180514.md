@@ -12,7 +12,6 @@ You declare constants with the let keyword and variables with the var keyword.*
 
 그렇다면 상수와 변수 (Constants And Variables) 을 선언하는 방법에 대해 알아보자.
 
-
 #상수 (Constant)
 
 ```
