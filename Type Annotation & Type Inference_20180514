@@ -14,6 +14,7 @@ red = 255.0
 green = 3.14
 blue = 2031.12930 //한 줄에 여러개의 상수 (Constants) 및 변수 (Variables) 의 Data Type 을 지정할 수 있다.
 ```
+
 타입추론 (Type Inference) 은 Swift 에서 지원하는 기능이다.
 
 The Swift Programming Language (Swift 4.1) - Apple 에 따르면 타입추론 (Type Inference) 을 다음과 같이 설명하고 있다.
