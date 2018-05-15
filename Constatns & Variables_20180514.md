@@ -12,7 +12,7 @@ You declare constants with the let keyword and variables with the var keyword.*
 
 그렇다면 상수와 변수 (Constants And Variables) 을 선언하는 방법에 대해 알아보자.
 
-#상수 (Constant)
+# 상수 (Constant)
 
 ```
 let [Name]: [Data Type] = [Value]
@@ -24,7 +24,7 @@ print(name)  //VenusK
 name: String = "VenusK2" //Error 발생
 print(name)
 ```
-#변수 (Variable)
+# 변수 (Variable)
 ```
 var [Name]: [DataType] = [Value]
 
@@ -35,7 +35,7 @@ print(name) //VenusK
 name: String ="VenusK2"
 print(name) //VenusK2
 ```
-###상수와 변수 모두 [Data Type] 을 생략할 수 있다.
+### 상수와 변수 모두 [Data Type] 을 생략할 수 있다.
 ```
 let [Name] = [Value]
 
