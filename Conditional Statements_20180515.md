@@ -193,11 +193,88 @@ default:
 ### Value binding
 
 ```
-let stillanotherPoint = (9, 0)
+let stillAnotherPoint = (9, 0)
 
 switch stillAnotherPoint {
 case (let distance, 0), (0, let distance)
-	print("On an axis, \(distance)")
+	print("On an axis, \(distance) from the origin")
 default:
 	print("Not on an axis")
 }
+```
+`let distance`와 같이 변수와 상수를 이용해 Data 를 전달할 수 있다.
+
+Value binding 을 사용하지 않고 작성하면 아래와 같다.
+
+```
+swtich stillAnotherPoint
+case (9, 0):
+	print("On an axis, 9 from the origin)
+case (0, 9):
+	print("On an axis, 9 from the origin)
+default:
+	print("Not on an axis")
+}
+```
+
+### No default case
+`case` 에서 모든 경우의 수를 다루었을 경우에는 `default` 를 사용하지 않아도 된다.
+
+```
+let c = true
+
+switch c {
+case ture:
+	print("true)
+case false:
+	print(:false)
+}
+```
+`c` 의 Data Type 은 `true` 와 `false` 만 존재하는 `Bool` 이므로 `case` 에서 모든 경우의 수를 다루었다.
+
+### Fallthrough
+
+`switch` 문의 `value` 값에 해당하는 `case` 를 실행한 뒤 `break` 를 하지 않고 다음 `case` 를 실행한다.
+> 다른 언어에서는 `switch` 문에서 `fallthrough` 가 기본이지만 Swift 에서는 `break` 가 기본이며, `fallthrough` 가 옵션이다.
+
+```
+let integerToDescribe = 5
+var description = "The number \(integerToDescribe) is"
+
+switch integerToDescribe {
+case = 2, 3, 5, 7, 11, 13, 17, 19:
+	desciption += " a prime number, and also"
+	fallthrough
+default:
+	description += " an integer."
+}
+```
+
+## Early Exit
+
+### Guard Statement
+
+`gaurd` Basic Syntax
+
+```
+guard condition else {
+	code
+}
+```
+`guard`문은 `if` 과 마찬가지로 `condition` 의 `Bool` 의 `Value` 로 동작을 한다.
+
+`guard`문 `condition` 의 `Value` 가 거짓 이라면 `else` 내부의 코드를 실행하게 되며, `else` 내부에는 상위의 코드를 종료하는 `code` 를 포함하게 된다.
+
+>`if`문과 `guard` 문의 비교
+>
+>```
+>for i in 0...3 {           |      for i in 0...3 {
+>	if i == 2 {              |  	     guard i == 2 else {
+>		print(i)           |		continue
+>	} else {                 |		}
+>		continue           |  	     print(i)
+>	}                        |       }    
+>}                          |
+>```
+
+
