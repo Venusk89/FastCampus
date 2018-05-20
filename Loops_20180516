@@ -1,0 +1,38 @@
+# Loops
+
+## For - In
+Basic Syntax
+
+```
+for [item] in [items] {
+	code
+}
+```
+`item` 에 `items` 를 하나씩 대입하여 `code` 를 실행한다.
+
+```
+for index in 1...4 {
+	print("\(index) times 5 is \(index * 5)")
+}
+```
+
+### Wildcard Pattern
+
+```
+for _ in 0...3 {
+	print("Hello.")
+}
+```
+```
+for chr in "Hello" {
+	print(chr)
+	print(type(of:chr))
+}
+```
+```
+let list = ["Swift". "Programming", "Language"]
+
+for str in list {
+	print(str)
+}
+```
